@@ -1,0 +1,11 @@
+To create the x** files:
+From your C:\MozillaVPNBuild directory (in bash, Git bash is fine):
+cd /c/MozillaVPNBuild
+tar cvfj qt_static.tar.bz2 *
+split -b 50m qt_static.tar.bz2
+
+
+To reassemble them from a checkout:
+cat x* > qt_static.tar.bz2
+tar xf qt_static.tar.bz2
+tar xf msm.tar.gz
